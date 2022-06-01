@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { Box, Grid, GridItem } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Main from "../components/HomeVideos";
 
 export default function Home(): NextPage {
