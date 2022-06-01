@@ -22,14 +22,16 @@ const SingleVideo = ({ video }) => {
         >
           VIDEO THUMBNAIL
         </Flex>
-        <Flex justifyContent="space-between">
-          <Box h="40px" w="40px" borderRadius="50%" bg="gray"></Box>
-          <Flex justifyContent="left" w="100%" direction="column">
-            <Text fontSize="14px">{video.title}</Text>
-            <Flex gap="4px" fontSize="12px">
-              <Text>{video.channelName}</Text>
-              <Text>{video.views}</Text>
-              <Text>{video.time}</Text>
+        <Flex justify="space-between" gap="4px" pt="4px">
+          <Flex gap="8px">
+            <Box h="40px" w="40px" borderRadius="50%" bg="gray"></Box>
+            <Flex justifyContent="left" direction="column">
+              <Text fontSize="14px">{video.title}</Text>
+              <Flex gap="4px" fontSize="12px">
+                <Text>{video.channelName}</Text>
+                <Text>{video.views}</Text>
+                <Text>{video.time}</Text>
+              </Flex>
             </Flex>
           </Flex>
           <Text>Icon</Text>

@@ -81,7 +81,7 @@ export default function Home(): NextPage {
       </Head>
       <Header />
       <Grid
-        gridTemplateColumns="repeat(auto-fit, minmax(350px, 1fr))"
+        gridTemplateColumns="repeat(auto-fit, minmax(310px, 1fr))"
         gap="16px"
       >
         {test.map((video) => (
