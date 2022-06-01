@@ -13,9 +13,15 @@ const SingleVideo = ({ video }) => {
   return (
     <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
       <Box h="100%" w="100%" fontFamily="Arial" key={video.id}>
-        <Box w="100%" h="200px" bg="green">
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          w="100%"
+          h="200px"
+          bg="green"
+        >
           VIDEO THUMBNAIL
-        </Box>
+        </Flex>
         <Flex justifyContent="space-between">
           <Box h="40px" w="40px" borderRadius="50%" bg="gray"></Box>
           <Flex justifyContent="left" w="100%" direction="column">
