@@ -1,5 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 // type Video = {
 //   id: string;
@@ -10,6 +11,7 @@ import { motion } from "framer-motion";
 // };
 
 const SingleVideo = ({ video }) => {
+  const router = useRouter();
   return (
     <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
       <Box h="100%" w="100%" fontFamily="Arial" key={video.id}>
@@ -18,7 +20,8 @@ const SingleVideo = ({ video }) => {
           alignItems="center"
           w="100%"
           h="200px"
-          bg='gray.500'
+          bg="gray.500"
+          onClick={() => router.push("/VideoID")}
         >
           VIDEO THUMBNAIL
         </Flex>
