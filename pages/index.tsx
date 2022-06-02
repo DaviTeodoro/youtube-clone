@@ -7,6 +7,7 @@ import Header from "../components/Header/Header";
 import Main from "../components/Main/HomeVideos";
 import SingleVideo from "../components/Main/SingleVideo";
 import { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
 
 const test = [
   {
@@ -98,6 +99,7 @@ export default function Home(): NextPage {
           <SingleVideo video={video} />
         ))}
       </Grid>
+      <Navbar />
       {/* <Grid
         h="calc(100vh - 60px)"
         gridTemplateRows="repeat(3, 1fr)"
