@@ -36,7 +36,7 @@ const PlayingVideo = () => {
             alignItems="center"
             direction="column"
           >
-            <AiOutlineDislike />
+            <AiOutlineLike />
             <Text fontSize="12px">200 mil</Text>
           </Flex>
           <Flex
@@ -46,7 +46,7 @@ const PlayingVideo = () => {
             alignItems="center"
             direction="column"
           >
-            <AiOutlineLike />
+            <AiOutlineDislike />
             <Text fontSize="12px">200 mil</Text>
           </Flex>
         </Flex>
