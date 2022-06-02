@@ -18,7 +18,7 @@ const SingleVideo = ({ video }) => {
           alignItems="center"
           w="100%"
           h="200px"
-          bg="green"
+          bg='gray.500'
         >
           VIDEO THUMBNAIL
         </Flex>

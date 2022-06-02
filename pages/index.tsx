@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-
+import Innertube from 'youtubei.js';
 import { Box, Grid, GridItem } from "@chakra-ui/react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/Header/Sidebar";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/HomeVideos";
 import SingleVideo from "../components/Main/SingleVideo";
+import { useState, useEffect } from 'react'
 
 const test = [
   {
@@ -74,12 +75,22 @@ const test = [
 ];
 
 export default function Home(): NextPage {
+
+  // useEffect(() => {
+  //   const getYoutube = async () => {
+  //     const youtube = await new Innertube({gl: 'US'})
+  //   }
+  //   getYoutube()
+  
+  // }, [])
+
   return (
-    <div>
+    <Box color='white' bg='#1d1d1d'>
       <Head>
         <title>Seu Tubo</title>
       </Head>
       <Header />
+      {/* <Sidebar /> */}
       <Grid
         gridTemplateColumns="repeat(auto-fit, minmax(310px, 1fr))"
         gap="16px"
@@ -100,6 +111,6 @@ export default function Home(): NextPage {
           <Main />
         </GridItem>
       </Grid> */}
-    </div>
+    </Box>
   );
 }
