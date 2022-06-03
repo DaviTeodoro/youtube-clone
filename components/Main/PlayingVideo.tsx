@@ -17,13 +17,13 @@ const PlayingVideo = () => {
       </Flex>
       <Flex justify="space-between" h="100%" py="4px" px="8px">
         <Flex direction="column">
-          <Text fontSize="14px"> Nome da porra do video que é grande </Text>
+          <Text cursor='pointer' fontSize="14px"> Nome da porra do video que é grande </Text>
           <Flex fontSize="12px" gap="4px">
-            <Text> 25 mil vizualizações </Text>
-            <Text> há 2 anos </Text>
+            <Text cursor='pointer'> 25 mil vizualizações </Text>
+            <Text cursor='pointer'> há 2 anos </Text>
           </Flex>
         </Flex>
-        <Flex h="100%" justifyContent="center" alignItems="center">
+        <Flex cursor='pointer' h="100%" justifyContent="center" alignItems="center">
           <HiOutlineChevronDown />
         </Flex>
       </Flex>
@@ -35,9 +35,10 @@ const PlayingVideo = () => {
             justifyContent="center"
             alignItems="center"
             direction="column"
+            cursor='pointer'
           >
             <AiOutlineLike />
-            <Text fontSize="12px">200 mil</Text>
+            <Text cursor='pointer' fontSize="12px">200 mil</Text>
           </Flex>
           <Flex
             w="100%"
@@ -45,9 +46,10 @@ const PlayingVideo = () => {
             justifyContent="center"
             alignItems="center"
             direction="column"
+            cursor='pointer'
           >
             <AiOutlineDislike />
-            <Text fontSize="12px">200 mil</Text>
+            <Text  cursor='pointer' fontSize="12px">200 mil</Text>
           </Flex>
         </Flex>
         <Flex justify="space-around" gap="16px">
@@ -57,6 +59,7 @@ const PlayingVideo = () => {
             justifyContent="center"
             alignItems="center"
             direction="column"
+            cursor='pointer'
           >
             <HiDownload />
             <Text fontSize="12px">Download</Text>
@@ -67,6 +70,7 @@ const PlayingVideo = () => {
             justifyContent="center"
             alignItems="center"
             direction="column"
+            cursor='pointer'
           >
             <AiOutlineLike />
             <Text fontSize="12px">Save</Text>
@@ -75,20 +79,19 @@ const PlayingVideo = () => {
       </Flex>
       <Flex
         justify="space-between"
-        h="100%"
         alignItems="center"
         gap="4px"
         px="8px"
         py="4px"
       >
-        <Flex gap="8px">
+        <Flex gap="8px" justifyContent='center' alignItems='center'>
           <Box h="30px" w="30px" borderRadius="50%" bg="gray"></Box>
           <Flex justifyContent="left" direction="column">
-            <Text fontSize="14px">Channel's Name</Text>
-            <Text fontSize="12px">122 mil inscritos</Text>
+            <Text cursor='pointer' fontSize="14px">Channel's Name</Text>
+            <Text cursor='pointer' fontSize="12px">122 mil inscritos</Text>
           </Flex>
         </Flex>
-        <Text color="red">INSCREVA-SE</Text>
+        <Text cursor='pointer' color="red">INSCREVA-SE</Text>
       </Flex>
     </Box>
   );

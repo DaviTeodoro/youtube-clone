@@ -12,7 +12,7 @@ const Navbar = () => {
       bottom="0"
       bg="#1d1d1d"
     >
-      <Flex direction="column" justifyContent="center" alignItems="center">
+      <Flex cursor='pointer' direction="column" justifyContent="center" alignItems="center">
         <AiFillHome />
         <Text fontSize="12px">Home</Text>
       </Flex>

@@ -16,20 +16,20 @@ export default function Header() {
       top={scrollDirection === "down" ? "-48px" : "0px"}
       w="100%"
     >
-      <Box>
+      <Box onClick={() => router.push("/")} cursor='pointer'>
         {/* <Sidebar /> */}
-        <Text onClick={() => router.push("/")} h="100%">
+        <Text h="100%">
           SeuTubo
         </Text>
       </Box>
 
       <Flex>
-        <Flex h="48px" w="48px" justifyContent="center" alignItems="center">
-          {/* <IoSearchOutline /> */}
+        <Flex cursor='pointer' h="48px" w="48px" justifyContent="center" alignItems="center">
+          
           <FiSearch />
         </Flex>
         <Flex h="48px" w="48px" justifyContent="center" alignItems="center">
-          <Box bg="gray" h="24px" w="24px" borderRadius="50%"></Box>
+          <Box cursor='pointer' bg="gray" h="24px" w="24px" borderRadius="50%"></Box>
         </Flex>
       </Flex>
     </Flex>
