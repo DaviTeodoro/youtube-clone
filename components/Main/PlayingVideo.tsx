@@ -1,9 +1,16 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useToast } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
 import { HiDownload, HiOutlineChevronDown } from "react-icons/hi";
 
 const PlayingVideo = () => {
+  const toast = useToast()
+  const workingOnIt = () =>
+  toast({
+    title: 'We are working on it.',
+    duration: 900,
+    isClosable: true,
+  })
   return (
     <Box>
       <Flex
@@ -17,13 +24,13 @@ const PlayingVideo = () => {
       </Flex>
       <Flex justify="space-between" h="100%" py="4px" px="8px">
         <Flex direction="column">
-          <Text cursor='pointer' fontSize="14px"> Nome da porra do video que é grande </Text>
+          <Text cursor='pointer' fontSize="14px" onClick={workingOnIt}> Nome da porra do video que é grande </Text>
           <Flex fontSize="12px" gap="4px">
-            <Text cursor='pointer'> 25 mil vizualizações </Text>
-            <Text cursor='pointer'> há 2 anos </Text>
+            <Text> 25 mil vizualizações </Text>
+            <Text> há 2 anos </Text>
           </Flex>
         </Flex>
-        <Flex cursor='pointer' h="100%" justifyContent="center" alignItems="center">
+        <Flex cursor='pointer' onClick={workingOnIt} h="100%" justifyContent="center" alignItems="center">
           <HiOutlineChevronDown />
         </Flex>
       </Flex>
@@ -36,9 +43,10 @@ const PlayingVideo = () => {
             alignItems="center"
             direction="column"
             cursor='pointer'
+            onClick={workingOnIt}
           >
             <AiOutlineLike />
-            <Text cursor='pointer' fontSize="12px">200 mil</Text>
+            <Text fontSize="12px">200 mil</Text>
           </Flex>
           <Flex
             w="100%"
@@ -47,9 +55,10 @@ const PlayingVideo = () => {
             alignItems="center"
             direction="column"
             cursor='pointer'
+            onClick={workingOnIt}
           >
             <AiOutlineDislike />
-            <Text  cursor='pointer' fontSize="12px">200 mil</Text>
+            <Text fontSize="12px">200 mil</Text>
           </Flex>
         </Flex>
         <Flex justify="space-around" gap="16px">
@@ -60,6 +69,7 @@ const PlayingVideo = () => {
             alignItems="center"
             direction="column"
             cursor='pointer'
+            onClick={workingOnIt}
           >
             <HiDownload />
             <Text fontSize="12px">Download</Text>
@@ -71,6 +81,7 @@ const PlayingVideo = () => {
             alignItems="center"
             direction="column"
             cursor='pointer'
+            onClick={workingOnIt}
           >
             <AiOutlineLike />
             <Text fontSize="12px">Save</Text>
@@ -85,13 +96,13 @@ const PlayingVideo = () => {
         py="4px"
       >
         <Flex gap="8px" justifyContent='center' alignItems='center'>
-          <Box h="30px" w="30px" borderRadius="50%" bg="gray"></Box>
+          <Box h="30px" onClick={workingOnIt} cursor='pointer' w="30px" borderRadius="50%" bg="gray"></Box>
           <Flex justifyContent="left" direction="column">
-            <Text cursor='pointer' fontSize="14px">Channel's Name</Text>
-            <Text cursor='pointer' fontSize="12px">122 mil inscritos</Text>
+            <Text cursor='pointer' onClick={workingOnIt} fontSize="14px">Channel's Name</Text>
+            <Text fontSize="12px">122 mil inscritos</Text>
           </Flex>
         </Flex>
-        <Text cursor='pointer' color="red">INSCREVA-SE</Text>
+        <Text cursor='pointer' onClick={workingOnIt} color="red">INSCREVA-SE</Text>
       </Flex>
     </Box>
   );
