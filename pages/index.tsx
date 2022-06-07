@@ -5,8 +5,10 @@ import { Box, Grid, GridItem } from "@chakra-ui/react";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header/Header";
 import Main from "../components/HomeVideos";
+import Innertube from "youtubei.js";
 
-export default function Home(): NextPage {
+export default function Home({ homefeed }): NextPage {
+  console.log(JSON.parse(homefeed));
   return (
     <div>
       <Head>
@@ -27,4 +29,12 @@ export default function Home(): NextPage {
       </Grid>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const youtube = await new Innertube({ gl: "US" });
+  const homefeed = await youtube.getHomeFeed();
+
+  console.log(homefeed);
+  return { props: { homefeed: JSON.stringify(homefeed) } };
 }
